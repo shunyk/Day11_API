@@ -15,7 +15,7 @@ public class Wrapper_ex1 {
 		System.out.println("주민번호 입력");
 		String id = sc.next();
 		String y = id.substring(0, 2);
-		if(y.substring(0, 1).equals("0") || y.substring(0, 1).equals("1")) {
+		if(id.substring(7, 8).equals("3") || id.substring(7, 8).equals("4")) {
 			year = Integer.parseInt(y);
 			year+=2000;
 			
@@ -34,7 +34,7 @@ public class Wrapper_ex1 {
 			System.out.println("여름 출생");
 		}else if (month >= 9 && month <= 11) {
 			System.out.println("가을 출생");
-		}else if (month == 12 || month <= 2) {
+		}else {
 			System.out.println("겨울 출생");
 		}		
 	}
