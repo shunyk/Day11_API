@@ -13,7 +13,7 @@ public class StringEx_1 {
 	public void ex5() {
 		System.out.println("업로드할 이미지 파일명 입력");
 		String img = sc.next();
-		int index = img.indexOf(".");
+		int index = img.lastIndexOf(".");
 		String find = img.substring(index+1);
 		System.out.println(find);
 		if(find.equals("gif") || find.equals("jpg") || find.equals("png")) {
