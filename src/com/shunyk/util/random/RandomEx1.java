@@ -23,7 +23,6 @@ public class RandomEx1 {
 
 		for(int i=0; i<lotto.length; i++) {
 			lotto[i] = rd.nextInt(45)+1;
-
 			if(i!=0) {
 				for(int j=0; j<i; j++) {
 					if(lotto[i]==lotto[j]) {
@@ -33,8 +32,6 @@ public class RandomEx1 {
 								break;
 							}
 						}
-					}else {
-						continue;
 					}
 				}
 			}
