@@ -20,7 +20,38 @@ public class Wrapper_ex2 {
 		//위의 결과값을 10으로 나눈 나머지를 체크번호와 비교
 		System.out.println("주민번호 입력");
 		String id = sc.next();
-		String [] id2 = id.split("-");
+		int z=2;
+		int sum=0;
+		int check=0;
+		for(int i=0; i<id.length(); i++) {
+			if(id.substring(i, i+1).equals("-")) {
+				continue;
+			}else {
+				if(i != id.length()-1) {
+					sum += (Integer.parseInt(id.substring(i, i+1))*z);
+					z++;
+					if(z>9) {
+						z=2;
+					}
+				}
+				else {
+					check = Integer.parseInt(id.substring(i, i+1));
+				}
+			}
+		}
+		z=sum%11;
+		if(11-z <10) {
+			sum = 11-z;
+		}else {
+			sum = (11-z)%10;
+		}
+		if(sum == check) {
+			System.out.println("OK");
+		}else {
+			System.out.println("NO");
+		}
+		
+		/*String [] id2 = id.split("-");
 		int check = 0;
 		int id3[] = new int[id.length()-1];
 		for(int i=0; i<id2.length; i++) {
@@ -51,7 +82,7 @@ public class Wrapper_ex2 {
 			System.out.println("OK");
 		}else {
 			System.out.println("NO");
-		}
+		}*/
 	}
 	
 }
