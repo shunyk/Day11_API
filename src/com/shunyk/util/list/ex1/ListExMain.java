@@ -28,7 +28,8 @@ public class ListExMain {
 
 			switch(select) {
 			case 1:
-				li.setInfo(ar);
+				Member m = li.setInfo();
+				ar.add(m);
 				break;
 			case 2:
 				lv.view(ar);

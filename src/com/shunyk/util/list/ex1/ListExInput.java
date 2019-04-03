@@ -5,15 +5,13 @@ import java.util.Scanner;
 
 public class ListExInput {
 	private Scanner sc;
-	private ArrayList ar;
 	
 	public ListExInput() {
 		sc = new Scanner(System.in);
-		ar = new ArrayList();
 	}
 	
 	
-	public void setInfo(ArrayList<Member> ar) {
+	public Member setInfo() {
 		Member member = new Member();
 		System.out.println("이름 입력");
 		String name = sc.next();
@@ -22,7 +20,7 @@ public class ListExInput {
 		int age = sc.nextInt();
 		member.setAge(age);
 		
-		ar.add(member);
+		return member;
 	}
 
 }
