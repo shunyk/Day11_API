@@ -13,7 +13,7 @@ public class ListExMain {
 		//	  모든 정보 출력
 		//3. 종료
 		Scanner sc = new Scanner(System.in);
-		ArrayList ar = new ArrayList();
+		ArrayList<Member> ar = new ArrayList<Member>();
 		ListExInput li = new ListExInput();
 		ListExView lv = new ListExView();
 

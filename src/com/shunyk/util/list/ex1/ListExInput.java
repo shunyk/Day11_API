@@ -13,13 +13,16 @@ public class ListExInput {
 	}
 	
 	
-	public void setInfo(ArrayList ar) {
+	public void setInfo(ArrayList<Member> ar) {
+		Member member = new Member();
 		System.out.println("이름 입력");
 		String name = sc.next();
+		member.setName(name);
 		System.out.println("나이 입력");
 		int age = sc.nextInt();
-		ar.add(name);
-		ar.add(age);
+		member.setAge(age);
+		
+		ar.add(member);
 	}
 
 }
