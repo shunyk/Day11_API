@@ -23,11 +23,13 @@ public class RandomEx1 {
 
 		for(int i=0; i<lotto.length; i++) {
 			lotto[i] = rd.nextInt(45)+1;
+			System.out.println(lotto[i]);
 			if(i!=0) {
 				for(int j=0; j<i; j++) {
 					if(lotto[i]==lotto[j]) {
 						while(true) {
 							lotto[i] = rd.nextInt(45)+1;
+							System.out.println(lotto[i]);
 							if(lotto[i]!=lotto[j]) {
 								break;
 							}
@@ -35,9 +37,13 @@ public class RandomEx1 {
 					}
 				}
 			}
-			System.out.println(lotto[i]);
+			
 		}		//	lotto[i] = rd.nextInt(45)+1;
 		//	System.out.print(lotto[i] + "\t");
+		
+		for(int i=0; i<lotto.length; i++) {
+			System.out.print(lotto[i] + "\t");
+		}
 	}
 
 
